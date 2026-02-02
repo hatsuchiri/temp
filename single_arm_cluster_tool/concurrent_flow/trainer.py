@@ -1,6 +1,7 @@
 import copy
 import logging
 import argparse
+from turtle import done
 import torch
 import random
 import numpy as np
@@ -8,12 +9,14 @@ import pandas as pd
 from datetime import datetime
 import os
 
+from torch.optim import optimizer
+
 from envs.sdcfEnv import sdcfEnv as Env, State
 from model.model_concat import CONCATNet as CONCATModel
 from envs.algorithms.cbs import ConcurrentBackwardSequence
 
 # Global configurations
-DEBUG_MODE = True
+DEBUG_MODE = False
 USE_CUDA = not DEBUG_MODE
 CUDA_DEVICE_NUM = 0
 SEED = 1000
@@ -44,13 +47,14 @@ def parse_arguments():
     parser.add_argument('--input_action', type=str, default='wafer', help='loadlock input action type = {wafer, type}')
     
     # Training parameters
-    parser.add_argument('--batch_size', type=int, default=32, help='Training batch size')
+    parser.add_argument('--batch_size', type=int, default=4, help='Training batch size')
     parser.add_argument('--num_episodes', type=int, default=100, help='Number of training episodes')
     parser.add_argument('--learning_rate', type=float, default=1e-4, help='Learning rate')
     parser.add_argument('--gamma', type=float, default=1, help='Discount factor')
     parser.add_argument('--save_interval', type=int, default=10, help='Interval for saving model')
     parser.add_argument('--log_interval', type=int, default=10, help='Interval for logging')
-    
+    parser.add_argument('--baselineN', type=int, default=1, help='Sample number for each baseline')
+
     return parser.parse_args()
 
 def get_stage_list():
@@ -63,7 +67,7 @@ def get_stage_list():
 def setup_trainer_params(args):
     """Initialize trainer parameters."""
     return {
-        'use_cuda': False,
+        'use_cuda': USE_CUDA,
         'cuda_device_num': CUDA_DEVICE_NUM,
         'model_save': {
             'enable': True,
@@ -75,6 +79,7 @@ def setup_trainer_params(args):
         'gamma': args.gamma,
         'save_interval': args.save_interval,
         'log_interval': args.log_interval,
+        'baselineN': args.baselineN,
     }
     
 def setup_env_params(args, stage_list):
@@ -109,7 +114,7 @@ def setup_model_params(args, env_params):
         'ms_hidden_dim': 16,
         'ms_layer1_init': (1/2)**(1/2),
         'ms_layer2_init': (1/16)**(1/2),
-        'eval_type': 'argmax',
+        'eval_type': 'softmax',
         'normalize': 'instance'
     }
 
@@ -133,113 +138,198 @@ class Trainer:
         # Training statistics
         self.episode_rewards = []
         self.episode_makespans = []
+
+        self.baselineN = trainer_params['baselineN']
     
-    def _stack_states(self, states: list):
-        """Stack multiple states into a single batch state."""
-        return State(**{field: torch.stack([getattr(state, field) for state in states])
-                        for field in State.__dataclass_fields__})
+
     
     def train(self):
         """Execute the training process."""
         print("Starting training...")
+
+        def _stack_states(states: list):
+            """Stack multiple states into a single batch state."""
+            return State(**{field: torch.stack([getattr(state, field) for state in states])
+                            for field in State.__dataclass_fields__})
         
         for episode in range(self.trainer_params['num_episodes']):
             # Initialize batch
             envs = []
             states = []
-            rewards = []
-            log_probs = []
-            done_flags = []
+     
             
-            # Reset environments
-            for _ in range(self.trainer_params['batch_size']):
+            for b in range(self.trainer_params['batch_size']):
                 env = Env(**self.env_params)
                 state = env.reset()
                 envs.append(env)
                 states.append(state)
             
             # Convert to batch state
-            batch_state = self._stack_states(states)
+            batch_state = _stack_states(states)
             batch_state.batch_idx = torch.arange(batch_state.batch_size())
             batch_state.to(self.device)
+            batch_state_trajectory = []
+            batch_action_trajectory = []
+            batch_prob_trajectory = []
+
             
             # Initialize model encoding
+            self.model.train()
+            self.model.to(self.device)
             self.model.encoding(batch_state)
-            
-            # Episode loop
-            while not batch_state.done.all():
+            makespans = [1e10 for _ in range(batch_state.batch_size())]
+            batchGt = [[] for _ in range(batch_state.batch_size())]
+            Tlength_of_each_Instance = [0 for _ in range(batch_state.batch_size())]
+            done_until_of_each_Instance = [[] for _ in range(batch_state.batch_size())]
+            T = 1
+            while not batch_state.done.all():                
                 # Get action and log probability
-                action, prob = self.model(batch_state)
-                
-                # Step environments
+                # 终于发现违和的地方在哪了，model可以直接batch处理，env不行要分开处理
+                ## batch处理          
                 next_states = []
-                step_rewards = []
-                step_log_probs = []
-                step_dones = []
-                
-                for b, (env, a) in enumerate(zip(envs, action)):
-                    if not env.done:
-                        next_state = env.step(a.item())
-                        #reward = -env.clock  # Negative makespan as reward
-                        done = env.done
-                        
-                        next_states.append(next_state)
-                        step_rewards.append(reward)
-                        step_log_probs.append(torch.log(prob[b]))
-                        step_dones.append(done)
+                # Step environments
+                batch_action, batch_prob = self.model(batch_state)
+                ##batch_action = batch_action.to(self.device) 
+                ##state的to方法没有返回值，是sdcEnv里自定义的，这么写返回None
+                batch_action.to(self.device) 
+                for b,a in enumerate(batch_action):
+                    next_state = envs[b].step(a.item())
+                    next_states.append(next_state)
+                    if envs[b].done and makespans[b] == 1e10:
+                        makespans[b] = copy.deepcopy(envs[b].clock)
+                        done_until_of_each_Instance[b].append(True)
+                        Tlength_of_each_Instance[b] = T
                     else:
-                        next_states.append(states[b])  # Keep old state for done environments
-                        step_rewards.append(0)
-                        step_log_probs.append(torch.tensor(0.0))
-                        step_dones.append(True)
+                        done_until_of_each_Instance[b].append(False)
+                batch_next_state = _stack_states(next_states)
+                batch_next_state.batch_idx = torch.arange(batch_next_state.batch_size())
+                batch_next_state.to(self.device)  
+
+                batch_state_trajectory.append(batch_state)
+                batch_action_trajectory.append(batch_action)
+                batch_prob_trajectory.append(batch_prob)
+
+                batch_state = batch_next_state
+
+                T += 1                
+            ## 本来想用T来计算每个Instance的长度，以免对T时刻已经done的Instance做梯度下降
+            ## 但是后来发现好像没必要，已经done的action prob等于1，log1 == 0
+            ## 想想bI这么写会不会被算在反向传播里，需不需要requires_grad = False
+            bmakespans = [1e10 for _ in range(batch_state.batch_size())]
+            Nsumbmakespans = [0 for _ in range(batch_state.batch_size())]
+            # baseline应该沿用先前的环境，而不是新创建batchsize个环境
+            # for b in range(self.tester_params['batch_size']):
+            #     benv = Env(**self.env_params)
+            #     bstate = benv.reset()
+            #     benvs.append(benv)
+            #     bstates.append(bstate)
+
+            ## 不知道为啥行不通
+            # for b in range(batch_state.batch_size()):
+            #      benv = copy.deepcopy(envs[b])
+            #      bstate = benv.reset()
+            #      benvs.append(benv)
+            #      bstates.append(bstate)
+            bstates = []
+            benvs = copy.deepcopy(envs)
+            for b in range(batch_state.batch_size()):
+                bstate = benvs[b].reset()
+                bstates.append(bstate)
+            
+
+            batch_bstate = _stack_states(bstates)
+            batch_bstate.batch_idx = torch.arange(batch_bstate.batch_size())
+            
+            ## 阅读原文知道每个Instance都有自己的b(I),所以batch里的每个bI单独算
+            ## batch这层循环放最外面
+            ## 额不对不对，按惯例算step是一个batch一起算，还是放里面把
+            ## length of tracjectory is T-1
+            Avgbmakespans_t = []
+            advantages = []
+            # shape [T-1,batchsize]
+            for t in range(T-1):
+                bstates = []
+                print('t==',t)                
+                for b in range(batch_bstate.batch_size()):                
+                # 把每个envb变成envbt，用tracjectory试试                
+                    bstate = benvs[b].reset()
+                    for tt in range(t):
+                        print('tt==',tt)
+                        bstate = benvs[b].step(batch_action_trajectory[tt][b].item())
+                        ## 这里envs对特定action的transition是deterministic的，不然可能env也要trajectory记录了
+                        ## AI帮我补充的代码是batch_action_trajectory[tt][i].item(),原来是为了把tensor转换为int
+                    #     bstates.append(bstate)
+                    # if tt == 0:
+                    #     batch_bstate = batch_bstate
+                    # else:
+                    #     batch_bstate = _stack_states(bstates)
+                    #     batch_bstate.batch_idx = torch.arange(batch_bstate.batch_size())
+                    #     batch_bstate.to(self.device)  
+                    ## tt 走完t步读一次bstate就行，不用边走边读bstate,否则batchsize会塞成t*batchsize
+                    bstates.append(bstate)
+                if t == 0:
+                    pass
+                else:
+                    batch_bstate = _stack_states(bstates)
+                    batch_bstate.batch_idx = torch.arange(batch_bstate.batch_size())
+                    batch_bstate.to(self.device)  
+
                 
-                # Update states
-                states = next_states
-                batch_state = self._stack_states(states)
-                batch_state.batch_idx = torch.arange(batch_state.batch_size())
-                batch_state.to(self.device)
-                
-                # Store rewards and log probabilities
-                rewards.extend(step_rewards)
-                log_probs.extend(step_log_probs)
-                done_flags.extend(step_dones)
-            
-            # Calculate returns
-            returns = []
-            G = 0
-            for r in reversed(rewards):
-                G = r + self.trainer_params['gamma'] * G
-                returns.insert(0, G)
-            
-            # # Normalize returns
-            # returns = torch.tensor(returns, device=self.device)
-            # returns = (returns - returns.mean()) / (returns.std() + 1e-8)
-            returns = torch.tensor(returns, device=self.device)
-            
-            # Calculate loss
-            loss = 0
-            for log_prob, R in zip(log_probs, returns):
-                loss -= log_prob * R
-            loss = loss.mean()
-            
-            # Backpropagate
-            self.optimizer.zero_grad()
-            loss.backward()
-            self.optimizer.step()
-            
-            # Calculate episode makespan
-            episode_makespan = sum(env.clock for env in envs) / len(envs)
-            self.episode_makespans.append(episode_makespan)
-            
-            # Logging
-            if episode % self.trainer_params['log_interval'] == 0:
-                avg_makespan = sum(self.episode_makespans[-self.trainer_params['log_interval']:]) / self.trainer_params['log_interval']
-                print(f"Episode {episode}/{self.trainer_params['num_episodes']}, Avg Makespan: {avg_makespan:.2f}")
-            
-            # Save model
-            if episode % self.trainer_params['save_interval'] == 0:
-                self.save_model(episode)
-        
+                # 以上把benv调到了t时刻，batch_bstate也相应调到了t时刻
+                # 下面还需要记录此时的状态，N次采样每次采样结束后都需要复原到此时状态
+                benvs_beforeNsample = copy.deepcopy(benvs)
+                batch_bstate_beforeNsample = copy.deepcopy(batch_bstate)
+
+                for _ in range(self.baselineN):
+                    benvs = copy.deepcopy(benvs_beforeNsample)
+                    batch_bstate = copy.deepcopy(batch_bstate_beforeNsample)
+                    batch_bstate.to(self.device)  
+                    bmakespans = [1e10 for _ in range(batch_state.batch_size())]
+ 
+                    while not batch_bstate.done.all():
+                        next_bstates = []
+                        ##其实这里不用next，因为不用记录trajectory，直接走到底就行了
+                        # Get action and log probability
+                        batch_baction, prob = self.model(batch_bstate)
+                        
+                        # Step environments
+                        for b,a in enumerate(batch_baction):
+                            next_bstate = benvs[b].step(a.item())
+                            next_bstates.append(next_bstate)
+                        if benvs[b].done and bmakespans[b] == 1e10:
+                            bmakespans[b] = copy.deepcopy(benvs[b].clock)
+                        batch_bnext_state = _stack_states(next_bstates)
+                        batch_bnext_state.batch_idx = torch.arange(batch_bnext_state.batch_size())
+                        batch_bnext_state.to(self.device)  
+
+                        batch_bstate = batch_bnext_state
+                    ## while结束后得到了1个batch的bI，需要N个求平均
+                    # Nsumbmakespans += bmakespans列表不能这么加
+                    ##再想想怎么加
+                    Nsumbmakespans = np.array(Nsumbmakespans) + np.array(bmakespans)
+
+                Avgbmakespans = Nsumbmakespans/self.baselineN
+                Avgbmakespans = Avgbmakespans.tolist()
+                Avgbmakespans_t.append(Avgbmakespans)
+
+                advantage_t = (-np.array(makespans))-(-np.array(Avgbmakespans))
+                advantage_t = advantage_t.tolist()
+                advantages.append(advantage_t)
+
+            print('start to calculate loss')
+            loss_trajectory = []
+            for advantage,prob in zip(advantages,batch_prob_trajectory):
+                loss = -advantage * torch.log(prob)
+                loss_trajectory.append(loss)   
+
+            loss_trajectory = np.array(loss_trajectory)
+            sum_loss = np.sum(loss_trajectory,axis=0)
+            optimizer.zero_grad()
+            sum_loss.backward()
+            optimizer.step()
+            print(f"Episode {episode}, Loss: {sum_loss.item():.4f}")   
+
+
         # Save final model
         self.save_model(self.trainer_params['num_episodes'])
         print("Training completed!")

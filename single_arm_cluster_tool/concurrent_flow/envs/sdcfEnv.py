@@ -294,9 +294,9 @@ class sdcfEnv:
             self.robot.load(self, loc_id=next_loc_id)
 
         else:  # Unload from PM
-            unload_loc_id = action - 1 #先减1是因为unload_loc_id是从1开始的
+            unload_loc_id = action - 1 ##先减1是因为unload_loc_id是从1开始的
             try:
-                unload_loc_stage = self.pms[unload_loc_id - 1].stage #再减1是因为self.pms是从0开始的
+                unload_loc_stage = self.pms[unload_loc_id - 1].stage ##再减1是因为self.pms是从0开始的
                 unload_wafer_group = self.pms[unload_loc_id - 1].group
             except AttributeError as e:
                 print(f"Error: {e}")

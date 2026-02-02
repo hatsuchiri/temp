@@ -56,9 +56,10 @@ class CONCATNet(nn.Module):
                 selected = torch.multinomial(prob, num_samples=1).squeeze(1)
                 # shape: (batch,)
                 selected_prob = prob[state.batch_idx, selected]
-                # shape: (batch, )
+                # shape: (batch,)
                 selected_prob[state.done.squeeze()] = 1
                 # to fix pytorch.multinomial bug on selecting 0 probability elements
+                ## 如果抽中概率为0的action，回while开头重新抽选
                 if (selected_prob != 0).all(): break
 
 
@@ -72,6 +73,8 @@ class CONCATNet(nn.Module):
             selected_prob[state.done.squeeze()] = 1
 
         return selected, selected_prob
+        ## selected.shape: (batch,), 被选中的action index
+        ## selected_prob.shape: (batch,)，被选中的action的概率，对于done的action，概率为1
 
     def forward(self, state):
         selected, prob = self.decoding(state)
@@ -224,7 +227,7 @@ class Decoder(nn.Module):
 
         # PM stage, wafer embedding
         encoded_row_add_dummy = torch.cat([encoded_row, torch.zeros_like(encoded_row[:, 0:1])], dim=1)
-        pm_lot_idx = state.loc_hold_wafer
+        pm_lot_idx = state.loc_hold_wafer ## ==-1 no wafer or means recipe int 0 or 1
         pm_lot_idx = torch.where(pm_lot_idx >= 0, pm_lot_idx, encoded_row_add_dummy.size(1)-1).to(torch.int64)
         stage_idx = (state.loc_stage -1).to(torch.int64)
 

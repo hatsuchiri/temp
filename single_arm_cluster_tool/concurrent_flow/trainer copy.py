@@ -13,7 +13,7 @@ from model.model_concat import CONCATNet as CONCATModel
 from envs.algorithms.cbs import ConcurrentBackwardSequence
 
 # Global configurations
-DEBUG_MODE = True
+DEBUG_MODE = False
 USE_CUDA = not DEBUG_MODE
 CUDA_DEVICE_NUM = 0
 SEED = 1000
@@ -44,7 +44,7 @@ def parse_arguments():
     parser.add_argument('--input_action', type=str, default='wafer', help='loadlock input action type = {wafer, type}')
     
     # Training parameters
-    parser.add_argument('--batch_size', type=int, default=32, help='Training batch size')
+    parser.add_argument('--batch_size', type=int, default=64, help='Training batch size')
     parser.add_argument('--num_episodes', type=int, default=100, help='Number of training episodes')
     parser.add_argument('--learning_rate', type=float, default=1e-4, help='Learning rate')
     parser.add_argument('--gamma', type=float, default=1, help='Discount factor')
@@ -63,7 +63,7 @@ def get_stage_list():
 def setup_trainer_params(args):
     """Initialize trainer parameters."""
     return {
-        'use_cuda': False,
+        'use_cuda': USE_CUDA,
         'cuda_device_num': CUDA_DEVICE_NUM,
         'model_save': {
             'enable': True,
@@ -109,7 +109,7 @@ def setup_model_params(args, env_params):
         'ms_hidden_dim': 16,
         'ms_layer1_init': (1/2)**(1/2),
         'ms_layer2_init': (1/16)**(1/2),
-        'eval_type': 'argmax',
+        'eval_type': 'softmax',
         'normalize': 'instance'
     }
 

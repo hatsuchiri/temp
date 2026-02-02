@@ -1,0 +1,21 @@
+看看env.reset后各pm的remaining处理时间，是不是因为t0初始化时remaining time就随机所以随机生成的既可以是t0也可以是t1
+recipe的随机生成是固定的，但是recipe在哪一步随机生成
+提问：env有没有batchsize，还是env下面的.state有batchsize
+
+next_states== [State(clock=tensor([60719.]), done=tensor([False]), action_mask=tensor([False, False,  True, False,  True, False, False,  True]), stage=tensor([1, 1, 1, 1, 1, 1]), loc_id=tensor([1, 2, 3, 4, 5, 6]), loc_stage=tensor([1, 2, 3, 4, 5, 6]), loc_status=tensor([1, 0, 1, 2, 2, 2]), loc_hold_wafer=tensor([ 0, -1,  0,  1,  1,  1]), loc_process_start_time=tensor([ 6.0719e+04, -1.0000e+00,  6.0707e+04,  0.0000e+00,  0.0000e+00,
+         0.0000e+00]), loc_process_end_time=tensor([ 6.0993e+04, -1.0000e+00,  6.0966e+04,  1.3000e+01,  1.8700e+02,  
+         3.7000e+01]), robot_loc=tensor([1]), recipe_flow=tensor([[1, 1, 1, 1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1, 1, 1, 1]]), recipe_time=tensor([[  0., 274., 142., 259.,   0.,   0.,   0.,   0.],
+        [  0.,   0.,   0.,   0., 158., 200., 293.,   0.]]), loadlock1_wafer_in=tensor([], dtype=torch.int64), loadlock2_wafer_in=tensor([7]), loadlock1_wafer_recipe=tensor([], dtype=torch.int64), loadlock2_wafer_recipe=tensor([1])), State(clock=tensor([23823.]), done=tensor([True]), action_mask=tensor([ True,  True, False,  True, False, False, False, False]), stage=tensor([1, 1, 1, 1, 1, 1]), loc_id=tensor([1, 2, 3, 4, 5, 6]), loc_stage=tensor([1, 2, 3, 4, 5, 6]), loc_status=tensor([0, 1, 0, 0, 0, 0]), loc_hold_wafer=tensor([-1,  0, -1, -1, -1, -1]), loc_process_start_time=tensor([-1.0000e+00,  2.3823e+04, -1.0000e+00, -1.0000e+00, -1.0000e+00,
+        -1.0000e+00]), loc_process_end_time=tensor([-1.0000e+00,  2.4043e+04, -1.0000e+00, -1.0000e+00, -1.0000e+00,  
+        -1.0000e+00]), robot_loc=tensor([2]), recipe_flow=tensor([[1, 1, 1, 1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1, 1, 1, 1]]), recipe_time=tensor([[  0., 206., 220., 223.,   0.,   0.,   0.,   0.],
+        [  0.,   0.,   0.,   0.,  39.,  77.,  99.,   0.]]), loadlock1_wafer_in=tensor([3]), loadlock2_wafer_in=tensor([6]), loadlock1_wafer_recipe=tensor([0]), loadlock2_wafer_recipe=tensor([1])), State(clock=tensor([38174.]), done=tensor([False]), action_mask=tensor([False, False, False,  True, False, False,  True, False]), stage=tensor([1, 1, 1, 1, 1, 1]), loc_id=tensor([1, 2, 3, 4, 5, 6]), loc_stage=tensor([1, 2, 3, 4, 5, 6]), loc_status=tensor([2, 2, 0, 1, 2, 0]), loc_hold_wafer=tensor([ 0,  0, -1,  1,  1, -1]), loc_process_start_time=tensor([ 3.7780e+04,  3.6204e+04, -1.0000e+00,  3.8174e+04,  3.7877e+04,
+        -1.0000e+00]), loc_process_end_time=tensor([ 3.7958e+04,  3.6494e+04, -1.0000e+00,  3.8200e+04,  3.7977e+04,  
+        -1.0000e+00]), robot_loc=tensor([4]), recipe_flow=tensor([[1, 1, 1, 1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1, 1, 1, 1]]), recipe_time=tensor([[  0., 178., 290., 252.,   0.,   0.,   0.,   0.],
+        [  0.,   0.,   0.,   0.,  26., 100., 288.,   0.]]), loadlock1_wafer_in=tensor([9]), loadlock2_wafer_in=tensor([8]), loadlock1_wafer_recipe=tensor([0]), loadlock2_wafer_recipe=tensor([1])), State(clock=tensor([18264.]), done=tensor([False]), action_mask=tensor([False, False, False,  True, False, False,  True, False]), stage=tensor([1, 1, 1, 1, 1, 1]), loc_id=tensor([1, 2, 3, 4, 5, 6]), loc_stage=tensor([1, 2, 3, 4, 5, 6]), loc_status=tensor([2, 2, 0, 1, 2, 0]), loc_hold_wafer=tensor([ 0,  0, -1,  1,  1, -1]), loc_process_start_time=tensor([ 0.0000e+00,  0.0000e+00, -1.0000e+00,  1.8264e+04,  1.8252e+04,
+        -1.0000e+00]), loc_process_end_time=tensor([ 6.2000e+01,  1.2700e+02, -1.0000e+00,  1.8352e+04,  1.8304e+04,  
+        -1.0000e+00]), robot_loc=tensor([4]), recipe_flow=tensor([[1, 1, 1, 1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1, 1, 1, 1]]), recipe_time=tensor([[  0., 226., 190., 118.,   0.,   0.,   0.,   0.],
+        [  0.,   0.,   0.,   0.,  88.,  52.,  40.,   0.]]), loadlock1_wafer_in=tensor([7]), loadlock2_wafer_in=tensor([], dtype=torch.int64), loadlock1_wafer_recipe=tensor([0]), loadlock2_wafer_recipe=tensor([], dtype=torch.int64))]    
