@@ -71,7 +71,7 @@ def setup_trainer_params(args):
         'cuda_device_num': CUDA_DEVICE_NUM,
         'model_save': {
             'enable': True,
-            'path': f'./saved_models/',
+            'path': f'./saved_models/result3',
         },
         'batch_size': args.batch_size,
         'num_episodes': args.num_episodes,
@@ -140,6 +140,7 @@ class Trainer:
         self.episode_makespans = []
 
         self.baselineN = trainer_params['baselineN']
+        self.done_quantity = env_params['done_quantity']
     
 
     
@@ -294,9 +295,9 @@ class Trainer:
                     ## while结束后得到了1个batch的bI，需要N个求平均
                     # Nsumbmakespans += bmakespans列表不能这么加
                     ##再想想怎么加
-                    Nsumbmakespans = np.array(Nsumbmakespans) + np.array(bmakespans)
+                    Nsumbmakespans = np.array(Nsumbmakespans) + np.array(bmakespans)/self.baselineN
 
-                Avgbmakespans = torch.tensor(Nsumbmakespans)/self.baselineN
+                Avgbmakespans = torch.tensor(Nsumbmakespans)
                 
                 Avgbmakespans_t.append(Avgbmakespans)
                 
@@ -311,12 +312,11 @@ class Trainer:
             print('start to calculate loss')
             loss_trajectory = []
             for advantage,prob in zip(advantages,batch_prob_trajectory):
-                loss = -advantage * torch.log(prob)
+                loss = -advantage * torch.log(prob)/self.done_quantity
                 loss_trajectory.append(loss)   
 
 
             sum_loss = sum(loss_trajectory)
-            sum_loss = sum_loss.mean()
             sum_loss = sum_loss.to(self.device)
             self.optimizer.zero_grad()
             sum_loss.backward(torch.ones_like(sum_loss))
