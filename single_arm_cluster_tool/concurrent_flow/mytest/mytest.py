@@ -1,5 +1,6 @@
 import torch
 import numpy as np
+import torch.nn.functional as F
 def gather_by_index(src, idx, dim=1, squeeze=True):
     """Gather elements from src by index idx along specified dim
 
@@ -43,16 +44,30 @@ for q,v in zip(Q,V):
     l.append(loss)
 
 b = sum(l)
-print(b)
-a = torch.tensor([1,2,3])
-print(a/3)
 
+a = torch.tensor([1,2,3])
 x = torch.tensor([2, 3, 4], dtype=torch.float, requires_grad=True)
-print(x)
+
 y = x * 2
 while y.norm() < 1000:
     y = y * 2
-print(y)
+
 
 y.backward(torch.ones_like(y))
-print(x.grad)
+
+
+stage_order = F.one_hot(
+            torch.arange(6),num_classes=6
+            )
+print('stage_order',stage_order)
+stage_order = stage_order[None, :, :]
+print('stage_order',stage_order)
+stage_order = stage_order.repeat(8, 1, 1)
+
+x1 = torch.tensor([[1]])[None, :, :].repeat(8, 6, 1)
+x2 = torch.tensor([[3]])[None, :, :].repeat(8, 6, 1)
+
+
+xcat = torch.cat([stage_order,x1,x2],dim=-1)
+
+

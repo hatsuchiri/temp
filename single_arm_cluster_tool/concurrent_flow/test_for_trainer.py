@@ -8,6 +8,8 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 import os
+import time
+import shutil
 
 from torch.optim import optimizer
 
@@ -66,12 +68,13 @@ def get_stage_list():
 
 def setup_trainer_params(args):
     """Initialize trainer parameters."""
+    file_name = os.path.basename(__file__).split('.')[0]
     return {
         'use_cuda': USE_CUDA,
         'cuda_device_num': CUDA_DEVICE_NUM,
         'model_save': {
             'enable': True,
-            'path': f'./saved_models/result3',
+            'path': f'./saved_models/result_{file_name}_{time.strftime("%Y%m_%d_%H_%M", t)}',
         },
         'batch_size': args.batch_size,
         'num_episodes': args.num_episodes,
@@ -339,6 +342,9 @@ class Trainer:
                 'episode_makespans': self.episode_makespans,
             }, checkpoint_path)
             print(f"Model saved to {checkpoint_path}")
+            current_file = os.path.abspath(__file__)
+            file_copy_path = f"{self.trainer_params['model_save']['path']}"
+            shutil.copy(current_file, file_copy_path)
 
 
 def main():

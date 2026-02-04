@@ -3,3 +3,8 @@ recipe的随机生成是固定的，但是recipe在哪一步随机生成
 提问：env有没有batchsize，还是env下面的.state有batchsize
 
 1个batch包含不同recipe，recipe[300,300]的梯度数值上影响比[10,10]会大很多
+打算调整一下求bNsamplemakespan的方法，先除N再求和防止和过大
+
+loss要除以wafer数量，让step小一些
+batch也可以调大一些
+或者Σ(prs_time/prs_num)得到统一标准化的makespan，这样可以抹消不同Instance之间的差异

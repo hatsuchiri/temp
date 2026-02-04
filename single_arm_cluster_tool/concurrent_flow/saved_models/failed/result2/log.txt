@@ -1,0 +1,3 @@
+train start: 11:13
+train end: 18:07
+把每个instance的loss分开做gd的，没直接求和
