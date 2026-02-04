@@ -8,6 +8,8 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 import os
+import time
+import shutil
 
 from torch.optim import optimizer
 
@@ -66,12 +68,13 @@ def get_stage_list():
 
 def setup_trainer_params(args):
     """Initialize trainer parameters."""
+    file_name = os.path.basename(__file__).split('.')[0]
     return {
         'use_cuda': USE_CUDA,
         'cuda_device_num': CUDA_DEVICE_NUM,
         'model_save': {
             'enable': True,
-            'path': f'./saved_models/',
+            'path': f'./saved_models/result_{file_name}_{time.strftime("%Y%m_%d_%H_%M", t)}',
         },
         'batch_size': args.batch_size,
         'num_episodes': args.num_episodes,
@@ -140,6 +143,7 @@ class Trainer:
         self.episode_makespans = []
 
         self.baselineN = trainer_params['baselineN']
+        self.done_quantity = env_params['done_quantity']
     
 
     
@@ -294,9 +298,9 @@ class Trainer:
                     ## while结束后得到了1个batch的bI，需要N个求平均
                     # Nsumbmakespans += bmakespans列表不能这么加
                     ##再想想怎么加
-                    Nsumbmakespans = np.array(Nsumbmakespans) + np.array(bmakespans)
+                    Nsumbmakespans = np.array(Nsumbmakespans) + np.array(bmakespans)/self.baselineN
 
-                Avgbmakespans = torch.tensor(Nsumbmakespans)/self.baselineN
+                Avgbmakespans = torch.tensor(Nsumbmakespans)
                 
                 Avgbmakespans_t.append(Avgbmakespans)
                 
@@ -311,12 +315,11 @@ class Trainer:
             print('start to calculate loss')
             loss_trajectory = []
             for advantage,prob in zip(advantages,batch_prob_trajectory):
-                loss = -advantage * torch.log(prob)
+                loss = -advantage * torch.log(prob)/self.done_quantity
                 loss_trajectory.append(loss)   
 
 
             sum_loss = sum(loss_trajectory)
-            sum_loss = sum_loss.mean()
             sum_loss = sum_loss.to(self.device)
             self.optimizer.zero_grad()
             sum_loss.backward(torch.ones_like(sum_loss))
@@ -339,6 +342,9 @@ class Trainer:
                 'episode_makespans': self.episode_makespans,
             }, checkpoint_path)
             print(f"Model saved to {checkpoint_path}")
+            current_file = os.path.abspath(__file__)
+            file_copy_path = f"{self.trainer_params['model_save']['path']}"
+            shutil.copy(current_file, file_copy_path)
 
 
 def main():
