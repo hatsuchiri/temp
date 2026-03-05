@@ -1,0 +1,368 @@
+2026-03-05 16:19:29,126 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Starting training...
+2026-03-05 16:19:33,181 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:19:33,555 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 0, avgLoss: -862273.0625
+2026-03-05 16:19:33,555 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 13234.078125
+2026-03-05 16:19:36,667 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:19:36,915 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 1, avgLoss: -786553.9375
+2026-03-05 16:19:36,915 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 14272.3125
+2026-03-05 16:19:40,095 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:19:40,361 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 2, avgLoss: -766931.25
+2026-03-05 16:19:40,361 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15425.890625
+2026-03-05 16:19:43,402 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:19:43,708 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 3, avgLoss: -733712.0
+2026-03-05 16:19:43,708 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16432.96875
+2026-03-05 16:19:46,745 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:19:47,038 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 4, avgLoss: -703631.875
+2026-03-05 16:19:47,038 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16997.953125
+2026-03-05 16:19:50,296 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:19:50,738 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 5, avgLoss: -660021.125
+2026-03-05 16:19:50,738 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17370.359375
+2026-03-05 16:19:53,869 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:19:54,157 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 6, avgLoss: -645376.75
+2026-03-05 16:19:54,157 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17666.765625
+2026-03-05 16:19:57,308 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:19:57,605 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 7, avgLoss: -595434.4375
+2026-03-05 16:19:57,606 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17527.359375
+2026-03-05 16:20:01,102 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:01,395 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 8, avgLoss: -591604.0
+2026-03-05 16:20:01,396 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17264.359375
+2026-03-05 16:20:04,470 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:04,795 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 9, avgLoss: -562936.125
+2026-03-05 16:20:04,795 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16645.578125
+2026-03-05 16:20:08,568 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:08,905 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 10, avgLoss: -550321.5
+2026-03-05 16:20:08,905 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16701.078125
+2026-03-05 16:20:12,301 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:12,599 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 11, avgLoss: -534328.3125
+2026-03-05 16:20:12,599 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16771.03125
+2026-03-05 16:20:16,029 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:16,342 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 12, avgLoss: -487626.5
+2026-03-05 16:20:16,342 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16416.515625
+2026-03-05 16:20:19,746 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:20,063 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 13, avgLoss: -481414.9375
+2026-03-05 16:20:20,063 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16337.5
+2026-03-05 16:20:23,104 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:23,397 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 14, avgLoss: -461397.40625
+2026-03-05 16:20:23,397 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16167.75
+2026-03-05 16:20:26,494 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:26,789 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 15, avgLoss: -459925.90625
+2026-03-05 16:20:26,789 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16068.59375
+2026-03-05 16:20:29,800 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:30,098 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 16, avgLoss: -447629.75
+2026-03-05 16:20:30,099 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15866.171875
+2026-03-05 16:20:33,116 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:33,411 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 17, avgLoss: -434574.6875
+2026-03-05 16:20:33,411 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15601.625
+2026-03-05 16:20:38,352 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:38,824 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 18, avgLoss: -419633.53125
+2026-03-05 16:20:38,824 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15637.1875
+2026-03-05 16:20:41,900 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:42,193 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 19, avgLoss: -455165.875
+2026-03-05 16:20:42,194 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15310.234375
+2026-03-05 16:20:45,330 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:45,633 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 20, avgLoss: -431975.5625
+2026-03-05 16:20:45,633 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15397.984375
+2026-03-05 16:20:48,776 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:49,084 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 21, avgLoss: -442095.3125
+2026-03-05 16:20:49,084 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15497.640625
+2026-03-05 16:20:52,381 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:52,697 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 22, avgLoss: -414105.71875
+2026-03-05 16:20:52,698 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15316.640625
+2026-03-05 16:20:55,884 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:56,203 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 23, avgLoss: -410349.84375
+2026-03-05 16:20:56,203 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15197.65625
+2026-03-05 16:20:59,400 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:20:59,705 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 24, avgLoss: -411886.1875
+2026-03-05 16:20:59,705 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15498.625
+2026-03-05 16:21:03,656 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:04,090 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 25, avgLoss: -416841.5625
+2026-03-05 16:21:04,091 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15461.765625
+2026-03-05 16:21:07,994 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:08,568 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 26, avgLoss: -411769.84375
+2026-03-05 16:21:08,569 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15660.578125
+2026-03-05 16:21:11,902 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:12,205 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 27, avgLoss: -426051.75
+2026-03-05 16:21:12,206 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15631.109375
+2026-03-05 16:21:15,022 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:15,314 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 28, avgLoss: -404739.71875
+2026-03-05 16:21:15,315 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15814.828125
+2026-03-05 16:21:18,429 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:18,721 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 29, avgLoss: -393516.6875
+2026-03-05 16:21:18,721 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15650.75
+2026-03-05 16:21:22,310 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:22,644 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 30, avgLoss: -370457.65625
+2026-03-05 16:21:22,644 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15805.0625
+2026-03-05 16:21:27,581 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:28,139 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 31, avgLoss: -388049.375
+2026-03-05 16:21:28,139 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 15861.28125
+2026-03-05 16:21:32,454 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:32,969 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 32, avgLoss: -376900.34375
+2026-03-05 16:21:32,969 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16157.546875
+2026-03-05 16:21:36,255 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:36,561 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 33, avgLoss: -382236.75
+2026-03-05 16:21:36,561 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16278.75
+2026-03-05 16:21:39,886 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:40,179 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 34, avgLoss: -398297.875
+2026-03-05 16:21:40,180 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16304.796875
+2026-03-05 16:21:43,451 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:43,743 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 35, avgLoss: -396694.53125
+2026-03-05 16:21:43,743 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16087.671875
+2026-03-05 16:21:47,078 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:47,349 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 36, avgLoss: -364165.1875
+2026-03-05 16:21:47,349 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16431.96875
+2026-03-05 16:21:50,429 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:50,728 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 37, avgLoss: -371232.9375
+2026-03-05 16:21:50,729 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16503.234375
+2026-03-05 16:21:54,043 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:54,336 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 38, avgLoss: -359379.8125
+2026-03-05 16:21:54,336 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16446.234375
+2026-03-05 16:21:57,533 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:21:57,835 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 39, avgLoss: -381591.75
+2026-03-05 16:21:57,835 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16488.265625
+2026-03-05 16:22:01,027 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:01,354 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 40, avgLoss: -375015.78125
+2026-03-05 16:22:01,354 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16493.671875
+2026-03-05 16:22:04,515 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:04,813 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 41, avgLoss: -366116.3125
+2026-03-05 16:22:04,813 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16298.453125
+2026-03-05 16:22:08,015 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:08,340 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 42, avgLoss: -396719.03125
+2026-03-05 16:22:08,340 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16521.6875
+2026-03-05 16:22:11,619 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:11,924 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 43, avgLoss: -379780.46875
+2026-03-05 16:22:11,925 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16735.140625
+2026-03-05 16:22:14,952 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:15,252 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 44, avgLoss: -397801.25
+2026-03-05 16:22:15,252 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16826.609375
+2026-03-05 16:22:18,438 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:18,744 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 45, avgLoss: -407513.9375
+2026-03-05 16:22:18,744 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16863.203125
+2026-03-05 16:22:21,761 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:22,063 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 46, avgLoss: -398888.9375
+2026-03-05 16:22:22,063 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17048.609375
+2026-03-05 16:22:25,155 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:25,478 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 47, avgLoss: -410206.75
+2026-03-05 16:22:25,478 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17133.203125
+2026-03-05 16:22:28,490 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:28,776 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 48, avgLoss: -384840.03125
+2026-03-05 16:22:28,776 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17226.4375
+2026-03-05 16:22:31,876 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:32,162 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 49, avgLoss: -407723.84375
+2026-03-05 16:22:32,162 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17162.125
+2026-03-05 16:22:35,238 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:35,519 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 50, avgLoss: -395161.5625
+2026-03-05 16:22:35,519 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17090.71875
+2026-03-05 16:22:38,579 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:38,902 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 51, avgLoss: -396554.6875
+2026-03-05 16:22:38,903 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17160.546875
+2026-03-05 16:22:42,002 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:42,304 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 52, avgLoss: -416906.28125
+2026-03-05 16:22:42,305 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 16986.203125
+2026-03-05 16:22:45,401 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:45,701 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 53, avgLoss: -401867.8125
+2026-03-05 16:22:45,701 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17254.59375
+2026-03-05 16:22:49,187 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:49,509 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 54, avgLoss: -421087.6875
+2026-03-05 16:22:49,509 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17327.046875
+2026-03-05 16:22:52,634 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:52,914 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 55, avgLoss: -390837.375
+2026-03-05 16:22:52,915 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17395.09375
+2026-03-05 16:22:56,371 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:56,685 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 56, avgLoss: -385650.1875
+2026-03-05 16:22:56,685 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17618.171875
+2026-03-05 16:22:59,681 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:22:59,999 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 57, avgLoss: -367159.78125
+2026-03-05 16:22:59,999 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17875.984375
+2026-03-05 16:23:03,278 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:03,599 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 58, avgLoss: -381524.46875
+2026-03-05 16:23:03,599 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 17894.703125
+2026-03-05 16:23:07,142 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:07,467 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 59, avgLoss: -372618.3125
+2026-03-05 16:23:07,467 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 18088.296875
+2026-03-05 16:23:10,503 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:10,815 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 60, avgLoss: -374598.03125
+2026-03-05 16:23:10,815 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 18325.796875
+2026-03-05 16:23:14,063 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:14,361 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 61, avgLoss: -362209.09375
+2026-03-05 16:23:14,361 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 18299.4375
+2026-03-05 16:23:17,575 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:17,876 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 62, avgLoss: -339423.6875
+2026-03-05 16:23:17,876 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 18381.953125
+2026-03-05 16:23:21,072 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:21,395 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 63, avgLoss: -371039.125
+2026-03-05 16:23:21,396 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 18413.953125
+2026-03-05 16:23:24,609 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:24,889 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 64, avgLoss: -337356.125
+2026-03-05 16:23:24,889 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 18572.015625
+2026-03-05 16:23:28,096 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:28,424 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 65, avgLoss: -361970.9375
+2026-03-05 16:23:28,424 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 18597.265625
+2026-03-05 16:23:31,816 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:32,130 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 66, avgLoss: -340767.15625
+2026-03-05 16:23:32,130 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 18699.109375
+2026-03-05 16:23:35,141 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:35,432 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 67, avgLoss: -348559.875
+2026-03-05 16:23:35,432 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 18832.65625
+2026-03-05 16:23:38,449 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:38,807 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 68, avgLoss: -337688.625
+2026-03-05 16:23:38,807 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 19425.1875
+2026-03-05 16:23:41,948 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:42,261 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 69, avgLoss: -365619.6875
+2026-03-05 16:23:42,262 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 19949.125
+2026-03-05 16:23:45,225 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:45,498 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 70, avgLoss: -353859.8125
+2026-03-05 16:23:45,498 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20355.421875
+2026-03-05 16:23:48,315 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:48,600 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 71, avgLoss: -337127.625
+2026-03-05 16:23:48,600 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20666.921875
+2026-03-05 16:23:51,749 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:52,048 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 72, avgLoss: -356725.0
+2026-03-05 16:23:52,048 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20667.59375
+2026-03-05 16:23:55,233 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:55,569 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 73, avgLoss: -341834.21875
+2026-03-05 16:23:55,570 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20780.546875
+2026-03-05 16:23:58,731 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:23:59,056 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 74, avgLoss: -367318.4375
+2026-03-05 16:23:59,056 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20534.15625
+2026-03-05 16:24:02,160 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:02,461 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 75, avgLoss: -339478.375
+2026-03-05 16:24:02,461 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20599.0
+2026-03-05 16:24:05,615 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:05,909 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 76, avgLoss: -343942.40625
+2026-03-05 16:24:05,909 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20638.390625
+2026-03-05 16:24:09,060 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:09,395 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 77, avgLoss: -368139.75
+2026-03-05 16:24:09,395 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20454.796875
+2026-03-05 16:24:12,602 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:12,907 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 78, avgLoss: -349066.40625
+2026-03-05 16:24:12,907 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20600.5625
+2026-03-05 16:24:16,050 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:16,362 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 79, avgLoss: -353393.375
+2026-03-05 16:24:16,363 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20453.421875
+2026-03-05 16:24:19,559 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:19,872 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 80, avgLoss: -358141.4375
+2026-03-05 16:24:19,872 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20088.59375
+2026-03-05 16:24:23,003 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:23,339 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 81, avgLoss: -396157.4375
+2026-03-05 16:24:23,340 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20063.359375
+2026-03-05 16:24:26,516 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:26,826 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 82, avgLoss: -358710.59375
+2026-03-05 16:24:26,826 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20232.953125
+2026-03-05 16:24:30,253 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:30,597 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 83, avgLoss: -369036.5625
+2026-03-05 16:24:30,597 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20422.921875
+2026-03-05 16:24:33,770 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:34,079 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 84, avgLoss: -356564.71875
+2026-03-05 16:24:34,079 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20419.046875
+2026-03-05 16:24:37,386 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:37,679 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 85, avgLoss: -357598.78125
+2026-03-05 16:24:37,679 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20398.40625
+2026-03-05 16:24:40,805 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:41,076 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 86, avgLoss: -352259.5625
+2026-03-05 16:24:41,076 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20618.765625
+2026-03-05 16:24:44,157 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:44,462 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 87, avgLoss: -342487.8125
+2026-03-05 16:24:44,463 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20338.796875
+2026-03-05 16:24:47,763 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:48,083 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 88, avgLoss: -323516.75
+2026-03-05 16:24:48,083 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20607.703125
+2026-03-05 16:24:51,287 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:51,599 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 89, avgLoss: -327048.875
+2026-03-05 16:24:51,599 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20599.421875
+2026-03-05 16:24:54,714 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:55,043 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 90, avgLoss: -335592.9375
+2026-03-05 16:24:55,043 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20456.171875
+2026-03-05 16:24:58,187 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:24:58,488 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 91, avgLoss: -307874.4375
+2026-03-05 16:24:58,488 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20738.0625
+2026-03-05 16:25:01,590 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:25:01,887 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 92, avgLoss: -310030.125
+2026-03-05 16:25:01,887 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20902.65625
+2026-03-05 16:25:05,105 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:25:05,428 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 93, avgLoss: -315893.75
+2026-03-05 16:25:05,428 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20931.84375
+2026-03-05 16:25:08,775 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:25:09,102 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 94, avgLoss: -301032.71875
+2026-03-05 16:25:09,102 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 21076.46875
+2026-03-05 16:25:12,396 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:25:12,708 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 95, avgLoss: -313309.4375
+2026-03-05 16:25:12,708 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20982.125
+2026-03-05 16:25:15,961 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:25:16,252 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 96, avgLoss: -307818.71875
+2026-03-05 16:25:16,252 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 21019.84375
+2026-03-05 16:25:19,547 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:25:19,862 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 97, avgLoss: -336291.75
+2026-03-05 16:25:19,862 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 21011.78125
+2026-03-05 16:25:22,739 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:25:23,066 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 98, avgLoss: -322940.0
+2026-03-05 16:25:23,066 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20897.8125
+2026-03-05 16:25:26,246 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - start to calculate loss
+2026-03-05 16:25:26,544 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Episode 99, avgLoss: -307609.15625
+2026-03-05 16:25:26,544 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - avgMakespan: 20994.578125
+2026-03-05 16:25:26,628 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Training completed!
+2026-03-05 16:25:45,743 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO - Average makespan of CBS: 6521.97, RL: 20859.05
+2026-03-05 16:25:45,755 - traintestinoneclass_nobI_tosee_grad_RESETwithoutRCP - INFO -     InstanceID       Type 1 Process Time       Type 2 Process Time  CBS Makespan  RL Makespan
+0            0   [229, 60, 211, 0, 0, 0]   [0, 0, 0, 76, 123, 133]          5135        15949
+1            1  [197, 126, 244, 0, 0, 0]   [0, 0, 0, 112, 21, 284]          7569        19028
+2            2    [65, 139, 92, 0, 0, 0]  [0, 0, 0, 159, 275, 290]          7648        34038
+3            3  [128, 192, 258, 0, 0, 0]  [0, 0, 0, 153, 251, 178]          6933        27272
+4            4   [126, 159, 22, 0, 0, 0]  [0, 0, 0, 187, 182, 159]          5126        25496
+5            5  [125, 133, 164, 0, 0, 0]   [0, 0, 0, 60, 258, 218]          6873        27491
+6            6    [162, 34, 32, 0, 0, 0]     [0, 0, 0, 60, 48, 78]          3251         8706
+7            7    [117, 36, 91, 0, 0, 0]  [0, 0, 0, 125, 120, 148]          4173        17935
+8            8  [281, 277, 234, 0, 0, 0]    [0, 0, 0, 11, 26, 244]          7551        15350
+9            9   [121, 22, 226, 0, 0, 0]   [0, 0, 0, 124, 14, 124]          4836        11049
+10          10   [29, 289, 265, 0, 0, 0]   [0, 0, 0, 130, 185, 65]          6760        18682
+11          11  [258, 232, 119, 0, 0, 0]   [0, 0, 0, 143, 76, 240]          6929        20732
+12          12   [143, 282, 48, 0, 0, 0]  [0, 0, 0, 255, 234, 269]          7435        32987
+13          13    [15, 169, 49, 0, 0, 0]  [0, 0, 0, 201, 206, 292]          7668        29242
+14          14  [238, 155, 239, 0, 0, 0]    [0, 0, 0, 145, 76, 25]          5439        11198
+15          15  [160, 169, 133, 0, 0, 0]   [0, 0, 0, 36, 116, 113]          4584        14236
+16          16  [150, 123, 106, 0, 0, 0]    [0, 0, 0, 10, 261, 88]          6697        19106
+17          17    [98, 140, 56, 0, 0, 0]    [0, 0, 0, 259, 38, 91]          6771        17310
+18          18    [286, 77, 70, 0, 0, 0]   [0, 0, 0, 31, 293, 232]          7625        28001
+19          19    [28, 202, 79, 0, 0, 0]  [0, 0, 0, 191, 205, 193]          5604        26714
+20          20   [188, 96, 254, 0, 0, 0]  [0, 0, 0, 159, 102, 153]          5920        17254
+21          21  [193, 147, 114, 0, 0, 0]  [0, 0, 0, 198, 275, 109]          7134        28670
+22          22  [171, 220, 168, 0, 0, 0]  [0, 0, 0, 126, 263, 100]          6841        24227
+23          23  [294, 273, 103, 0, 0, 0]   [0, 0, 0, 107, 87, 290]          7772        22205
+24          24  [227, 245, 284, 0, 0, 0]    [0, 0, 0, 57, 216, 66]          7494        17646
+25          25  [265, 128, 180, 0, 0, 0]   [0, 0, 0, 12, 209, 180]          6988        20879
+26          26   [111, 105, 35, 0, 0, 0]   [0, 0, 0, 40, 225, 232]          6182        25485
+27          27    [99, 96, 116, 0, 0, 0]   [0, 0, 0, 168, 77, 135]          4587        16216
+28          28  [260, 176, 236, 0, 0, 0]     [0, 0, 0, 32, 58, 29]          4751         6989
+29          29  [168, 196, 115, 0, 0, 0]  [0, 0, 0, 103, 259, 228]          6895        29135
+30          30  [195, 183, 238, 0, 0, 0]   [0, 0, 0, 227, 84, 144]          6414        17037
+31          31   [128, 93, 219, 0, 0, 0]  [0, 0, 0, 214, 283, 182]          7341        31992
+32          32  [255, 199, 287, 0, 0, 0]   [0, 0, 0, 269, 291, 80]          7596        30374
+33          33    [21, 65, 180, 0, 0, 0]   [0, 0, 0, 296, 298, 29]          7609        27487
+34          34  [291, 125, 141, 0, 0, 0]   [0, 0, 0, 30, 251, 143]          7754        22124
+35          35   [49, 138, 250, 0, 0, 0]   [0, 0, 0, 11, 189, 195]          6783        20632
+36          36   [242, 16, 140, 0, 0, 0]    [0, 0, 0, 15, 104, 20]          4464         7953
+37          37   [280, 31, 195, 0, 0, 0]  [0, 0, 0, 182, 101, 185]          6759        20420
+38          38  [225, 226, 296, 0, 0, 0]  [0, 0, 0, 183, 158, 145]          6799        22493
+39          39   [201, 163, 26, 0, 0, 0]   [0, 0, 0, 285, 93, 280]          7381        27694
+40          40  [205, 258, 266, 0, 0, 0]   [0, 0, 0, 113, 128, 19]          4958        12951
+41          41  [252, 214, 235, 0, 0, 0]   [0, 0, 0, 68, 125, 238]          6743        21664
+42          42    [18, 258, 54, 0, 0, 0]   [0, 0, 0, 180, 69, 149]          6471        18536
+43          43   [17, 125, 236, 0, 0, 0]   [0, 0, 0, 235, 223, 20]          6357        20368
+44          44     [92, 71, 73, 0, 0, 0]   [0, 0, 0, 226, 57, 145]          5942        16183
+45          45   [49, 122, 300, 0, 0, 0]   [0, 0, 0, 189, 19, 116]          6811        12551
+46          46   [28, 146, 266, 0, 0, 0]   [0, 0, 0, 248, 244, 66]          7095        24895
+47          47   [13, 252, 101, 0, 0, 0]    [0, 0, 0, 41, 212, 63]          6702        16638
+48          48   [143, 56, 223, 0, 0, 0]  [0, 0, 0, 122, 176, 192]          6120        22704
+49          49  [281, 104, 145, 0, 0, 0]   [0, 0, 0, 207, 44, 201]          7338        18015
+50          50   [91, 277, 139, 0, 0, 0]   [0, 0, 0, 38, 300, 122]          7799        23180
+51          51  [103, 204, 213, 0, 0, 0]  [0, 0, 0, 260, 128, 255]          6796        28753
+52          52    [32, 40, 248, 0, 0, 0]   [0, 0, 0, 49, 121, 261]          6943        21074
+53          53  [229, 237, 199, 0, 0, 0]   [0, 0, 0, 35, 194, 291]          7704        26721
+54          54    [296, 15, 31, 0, 0, 0]    [0, 0, 0, 35, 74, 105]          5354        11493
+55          55    [28, 145, 46, 0, 0, 0]    [0, 0, 0, 40, 74, 123]          4140        12482
+56          56   [58, 135, 197, 0, 0, 0]   [0, 0, 0, 44, 154, 133]          5406        16908
+57          57   [139, 31, 134, 0, 0, 0]   [0, 0, 0, 240, 280, 78]          7194        27832
+58          58  [289, 238, 183, 0, 0, 0]   [0, 0, 0, 51, 227, 170]          7642        22810
+59          59  [242, 146, 209, 0, 0, 0]   [0, 0, 0, 292, 99, 212]          7569        20123
+60          60  [285, 295, 222, 0, 0, 0]   [0, 0, 0, 212, 54, 200]          7615        19218
+61          61  [141, 279, 125, 0, 0, 0]  [0, 0, 0, 218, 117, 217]          7362        22650
+62          62   [212, 110, 67, 0, 0, 0]    [0, 0, 0, 62, 20, 232]          6305        15216
+63          63   [228, 77, 259, 0, 0, 0]   [0, 0, 0, 168, 266, 88]          6969        24580

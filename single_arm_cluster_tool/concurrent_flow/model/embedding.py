@@ -30,7 +30,7 @@ class LotStageEmbedding(nn.Module):
         embedding_dim = params['embedding_dim']
         self.purge_constraint = params['purge']
         row_feat_dim = 1 # {#wafer} -> new: {0}
-        col_feat_dim = self.col_cnt + 2 # ={order, #PM, purge time}
+        col_feat_dim = self.col_cnt + 2 # ={order + #PM + purge time}
 
         self.proj_row_feat = nn.Linear(row_feat_dim, embedding_dim, bias=False)
         self.proj_col_feat = nn.Linear(col_feat_dim, embedding_dim, bias=False)

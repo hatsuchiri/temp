@@ -55,19 +55,13 @@ while y.norm() < 1000:
 
 y.backward(torch.ones_like(y))
 
-
+f = torch.tensor([5,1,2,3,4,0])
 stage_order = F.one_hot(
-            torch.arange(6),num_classes=6
+            f,num_classes=6
             )
 print('stage_order',stage_order)
-stage_order = stage_order[None, :, :]
-print('stage_order',stage_order)
-stage_order = stage_order.repeat(8, 1, 1)
-
-x1 = torch.tensor([[1]])[None, :, :].repeat(8, 6, 1)
-x2 = torch.tensor([[3]])[None, :, :].repeat(8, 6, 1)
 
 
-xcat = torch.cat([stage_order,x1,x2],dim=-1)
+
 
 

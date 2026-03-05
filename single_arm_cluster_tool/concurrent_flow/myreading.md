@@ -5,6 +5,8 @@
                 return pm.hold_wafer is not None  # Last stage for type 2
 
     stage = [....]
+    e.g. stage = [1,2,1,1,1,2] num_of_pm = 1,2,1,1,1,2
+    
     stage[0:self.group1_stage] belongs to group 1
     stage[self.group1_stage:] belongs to group 2
     After last stage is LL_out, which is always available
