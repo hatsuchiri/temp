@@ -294,9 +294,11 @@ class sdcfEnv:
             self.robot.load(self, loc_id=next_loc_id)
 
         else:  # Unload from PM
-            unload_loc_id = action - 1 ##先减1是因为unload_loc_id是从1开始的
+            unload_loc_id = action - 1 
+            ##先减1是因为关于PM的unload_loc_id从1开始，而关于PM的action从2开始（action的0，1留给loadlock），对齐一下
+            ##loc_id还是从0开始
             try:
-                unload_loc_stage = self.pms[unload_loc_id - 1].stage ##再减1是因为self.pms是从0开始的
+                unload_loc_stage = self.pms[unload_loc_id - 1].stage ##pm不包含ll，loc_id包含ll
                 unload_wafer_group = self.pms[unload_loc_id - 1].group
             except AttributeError as e:
                 print(f"Error: {e}")
@@ -326,6 +328,21 @@ class sdcfEnv:
         Reset the environment to its initial state.
         """
         self._init_recipes()  # Initialize recipes
+        self._init_wafers_foups_queues()  # Initialize wafers, FOUPs, and queues
+        self._init_robot()  # Initialize the robot arm
+        self._init_pms()  # Initialize the processing machines (PMs)
+        self._init_initial_state()  # Set the initial state of the environment
+
+        self.action_mask = self.get_action_mask()  # Get the initial action mask
+        self.done = self.get_done()  # Check if the environment is done
+        self.state = self.get_state()  # Get the initial state
+
+        return self.state
+
+    def reset_except_recipes(self):
+        """
+        Reset the environment to its initial state except for the recipes.
+        """
         self._init_wafers_foups_queues()  # Initialize wafers, FOUPs, and queues
         self._init_robot()  # Initialize the robot arm
         self._init_pms()  # Initialize the processing machines (PMs)

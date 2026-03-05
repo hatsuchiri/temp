@@ -35,15 +35,15 @@ def set_seed(seed=SEED):
 def parse_arguments():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(description='Train a model with a specific number of lot types')
-    parser.add_argument('--foup_size', type=int, default=50, help='Size of the foup')
+    parser.add_argument('--foup_size', type=int, default=100, help='Size of the foup')
     parser.add_argument('--group1_stage', type=int, default=0, help='Stages for type 1')
     parser.add_argument('--group1_min_prs_time', type=int, default=10, help='Minimum processing time for type 1')
     parser.add_argument('--group1_max_prs_time', type=int, default=300, help='Maximum processing time for type 1')
     parser.add_argument('--group2_stage', type=int, default=1, help='Stages for type 2')
     parser.add_argument('--group2_min_prs_time', type=int, default=10, help='Minimum processing time for type 2')
     parser.add_argument('--group2_max_prs_time', type=int, default=300, help='Maximum processing time for type 2')
-    parser.add_argument('--prod_quantity', type=int, default=2, help='Production quantity (Unit: FOUP)')
-    parser.add_argument('--done_quantity', type=int, default=100, help='Done Production quantity (Unit: Wafer)')
+    parser.add_argument('--prod_quantity', type=int, default=1, help='Production quantity (Unit: FOUP)')
+    parser.add_argument('--done_quantity', type=int, default=50, help='Done Production quantity (Unit: Wafer)')
     # 这里单位应该是FOUP呀，怎么给我标个Wafer,太处了
     # 就是Wafer，我错了
     parser.add_argument('--num_lot_type', type=int, default=2, help='Total number of lot types')
